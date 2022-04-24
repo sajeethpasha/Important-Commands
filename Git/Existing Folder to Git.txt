@@ -1,0 +1,18 @@
+echo "# 50Day---50Html-Css-JS-page" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <your rep Link>
+git push -u origin main
+
+----------------------------------------------------------------------------
+#How to push a repo to an existing
+  git init
+  git add .
+  git config --global user.email "<your-github-email>" && git config --global user.name "<your-githb-username>"
+  git commit -m "<>"
+  git remote add origin <repohttps>
+  git remote -v //to confirm
+  git branch main master -f && git checkout main //'do this if gits default branch is master'
+  git push origin main -f
