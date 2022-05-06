@@ -1,0 +1,78 @@
+
+****************kubectl command***************
+kubectl get service-url
+kubectl get svc
+kubectl get nodes -o wide
+kubectl get pod
+kubectl get deployment
+
+kubectl -h -->this is for help.
+
+kubectl describe pod
+
+kubectl describe deployment ngix-server
+
+kubectl get replicasets
+
+kubectl edit deployment
+
+kubectl logs <pod Name>
+
+/*******to deply application ******************/
+kubectl apply -f .\deploy.yml -->deploy a file
+kubectl describe service myapp-svc -->to check service file
+kubectl get pods -o wide
+/*************************************************/
+
+/************Namespaces*******************/
+kubectl get namespaces
+kubectl create namespace sajeeth-namespace ->to create name spaces
+/*****************************************/
+
+kubectl apply -f .\deploy.yaml --namespace=sajeeth-namespace
+kubect get deployment -n sajeeth-namespace
+kubect get pods -n sajeeth-namespace
+kubect delete -f .\deploy.yaml
+
+minikube addons enable ingress
+
+
+
+kubectl get deployment -o yaml
+kubectl get namespaces
+
+
+
+
+
+
+
+/**Now, run any kubectl command, if you have the deployment yaml file then,...**/
+kubectl apply -f <file path with name>
+
+/*** to go inside the container use exit to get out from command*********/
+kubectl exec -it ngix-server-5c4dd4bdf4-z8tgf -- bin/bash
+
+kubectl delete deployment nginx-server
+kubectl delete -f .\deploy.yml
+
+
+kubectl get all
+kubectl get ignress
+
+*****************minikube command***************
+choco install minikube  -->to install minikube
+minikube start
+minikube start --driver=docker
+minikube config set driver docker
+
+minikube dashaboard
+
+
+
+http://{nodeIp}:{port}/{API URL}
+http://192.168.64.14:32208/messag
+
+
+
+
