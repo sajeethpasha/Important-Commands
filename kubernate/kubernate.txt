@@ -49,6 +49,7 @@ kubectl get namespaces
 
 /**Now, run any kubectl command, if you have the deployment yaml file then,...**/
 kubectl apply -f <file path with name>
+kubectl apply -f ./   --> apply all file
 
 /*** to go inside the container use exit to get out from command*********/
 kubectl exec -it ngix-server-5c4dd4bdf4-z8tgf -- bin/bash
@@ -59,6 +60,9 @@ kubectl delete -f .\deploy.yml
 
 kubectl get all
 kubectl get ignress
+
+kubectl logs --follow [name] --> for Live logs
+
 
 *****************minikube command***************
 choco install minikube  -->to install minikube

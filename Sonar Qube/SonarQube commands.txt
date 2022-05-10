@@ -1,0 +1,11 @@
+mvn clean install
+mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin123
+
+
+sample
+org.codehaus.sonar-plugins.pdf-report:maven-pdfreport-plugin:1.3:generate -Dsonar.host.url=http://localhost:9000 -Dreport.type=executive -Dsonar.pdf.username=admin -Dsonar.pdf.password=admin
+
+
+./gradlew sonarqube -D "sonar.projectKey=microservicesOne" -D "sonar.host.url=http://localhost:9000" -D "sonar.login=4f63f193b8e017ee51c9dd3fa28b84021686e30a"
+
+./gradlew sonarqube -D "sonar.projectKey=<code>" -D "sonar.host.url=http://localhost:9000" -D "sonar.login=<code>"
