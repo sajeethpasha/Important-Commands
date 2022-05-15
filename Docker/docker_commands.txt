@@ -1,0 +1,43 @@
+#To build command
+Docker build -f Dockerfile -t service-registry-img .
+#To tag
+docker tag service-registry-img localhost:5000/service-registry-img
+
+#To push local rgi
+docker push localhost:5000/service-registry-img
+
+#Create registry
+docker run -d  -p 5000:5000 --restart=always  --name registry   -v /data/registry:/var/lib/registry   registry:2
+
+docker container stop registry && docker container rm -v registry
+
+ docker container stop registry -->To stop a registry
+ @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
+ 
+ 
+ *******************************************************************
+ 
+ docker build . -t eazybytes/accounts"	To generate a docker image based on a Dockerfile
+ docker run -p 8081:8080 eazybytes/accounts      ===>         To start a docker container based on a given image
+ docker images      ===>         To list all the docker images present in the Docker server
+ docker image inspect image-id      ===>         To display detailed image information for a given image id
+ docker image rm image-id      ===>         To remove one or more images for a given image ids
+ docker image push docker.io/eazybytes/accounts      ===>         To push an image or a repository to a registry
+ docker image pull docker.io/eazybytes/accounts      ===>         To pull an image or a repository from a registry
+ docker ps      ===>         To show all running containers
+ docker ps -a      ===>         To show all containers including running and stopped
+ docker container start container-id      ===>         To start one or more stopped containers
+ docker container pause container-id      ===>         To pause all processes within one or more containers
+ docker container unpause container-id      ===>         To unpause all processes within one or more containers
+ docker container stop container-id      ===>         To stop one or more running containers
+ docker container kill container-id      ===>         To kill one or more running containers instantly
+ docker container restart container-id      ===>         To restart one or more containers
+ docker container inspect container-id      ===>         To inspect all the details for a given container id
+ docker container logs container-id      ===>         To fetch the logs of a given container id
+ docker container logs -f container-id      ===>         To follow log output of a given container id
+ docker container rm container-id      ===>         To remove one or more containers based on container ids
+ docker container prune      ===>         To remove all stopped containers
+ docker compose up      ===>         To create and start containers based on given docker compose file
+ docker compose stop      ===>         To stop services
+*******************************************************************
+
