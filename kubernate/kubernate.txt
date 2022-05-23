@@ -78,7 +78,11 @@ minikube start --driver=docker
 minikube start --insecure-registry true
 
 
+#for shell or linux
 eval $(minikube -p minikube docker-env)
+
+# for windows
+@FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
 minikube docker-env
 
 #load image in minikube
