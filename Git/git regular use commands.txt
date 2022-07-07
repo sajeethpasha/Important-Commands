@@ -1,0 +1,33 @@
+#Master branch changes to featureBrance 
+git checkout master 
+git pull 
+git checkout dev-user
+git pull
+git merge master 
+git push 
+
+#git two switch to another branch
+git checkout ftwo
+
+
+#git create new branch
+git checkout -b ftwo
+
+#git push feature brance to Remote Git
+git push --set-upstream origin fone
+
+#git  commits
+git log
+
+#git last 1 commits
+git log -1
+
+#If you want all changes from master in fone, then:
+git checkout fone
+git reset --hard master
+
+#git reflog  will display any change which updated the HEAD and checking out the desired reflog
+git reflog
+
+
+
