@@ -30,4 +30,16 @@ git reset --hard master
 git reflog
 
 
+git config --global user.name "sajeeth"
+git config --global user.emai "sajeeth@gmail.com"
+
+## to delete branch
+git branch -d feature
+
+#create and switch to new branch
+git checkout -b newbranch
+
+# to connect git remote
+git remote add origin git@github.com:sajeethpasha
+
 

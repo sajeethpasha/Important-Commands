@@ -1,0 +1,58 @@
+# -->means in root user
+$ -->means in user mode
+
+## to swith from user to root
+sudo su
+
+##list of all file in folder
+ls
+ls -l -->detailing show with permissions
+ll ---> detial show with total count
+
+
+##dir
+same as ls
+
+##rm to remove the folder
+rm -r folder 
+
+##super privlaage to enti cmd console 
+sudo su
+
+## view file
+cat file.text
+
+## linux file command line argumets
+nano
+
+##open ile
+gedit file.text
+
+##change directory persimissions
+
+##any file  excute file
+./fiel.sh
+
+
+##run shell program
+bash file.txt
+
+##update packag list
+apt-get update
+
+##update all installed softerwar in linux
+apt-get upgrade
+
+##expr for logical operation
+expr --version -->to check version
+expr 2+2 -->4 (response)
+
+
+******************************user*******************
+## to create users
+sudo useradd user2
+
+## chmod permissions
+
+
+
