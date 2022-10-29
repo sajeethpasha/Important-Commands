@@ -1,3 +1,9 @@
  mvn clean install -Dmaven.test.skip=true    ===>   To generate a jar inside target folder
  mvn spring-boot:run    ===>   To start a springboot maven project
  mvn spring-boot:build-image -Dmaven.test.skip=true    ===>   To generate a docker image using Buildpacks. No need of Dockerfile
+
+-----------------------------------Run spring boot applicaitn with @Value param ----------------------------------------------
+mvn spring-boot:run -Dspring-boot.run.arguments=--api.prediction.base.url=something  -->to run spring boot application  with @Value from cmd
+
+mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8999 --api.prediction.base.url=https://ags-qa-predictions.azur" -->to run spring boot application  with  multiple @Value from cmd
+------------------------------------------------------------------------------------------------------------------------------------------
