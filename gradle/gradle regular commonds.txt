@@ -1,0 +1,15 @@
+#To check project name
+gradle -q projects
+
+#Listing Tasks
+gradle -q tasks  
+
+
+#Listing Dependencies: In Gradle, we can list the dependencies which are broken down by the configuration. To list the dependencies, run the below command:
+gradle -q dependencies
+
+# Passing Arguments to your Application
+./gradlew bootRun --args='--spring.profiles.active=dev'
+
+#Gradle allows project properties to be set in a variety of ways, including on the command line using the -P flag, as shown in the following example:
+./gradlew bootRun -Pexample=custom

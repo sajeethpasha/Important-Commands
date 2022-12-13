@@ -42,4 +42,10 @@ git checkout -b newbranch
 # to connect git remote
 git remote add origin git@github.com:sajeethpasha
 
+#created new branche to remote repo
+git push -u origin new_branch_name
+
+#revert  changes to last commit
+git checkout -- specififile.txt
+
 
