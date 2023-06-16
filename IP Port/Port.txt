@@ -1,0 +1,1 @@
+netstat -aon | find /i "6379"

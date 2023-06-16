@@ -91,6 +91,7 @@ minikube image load localhost:5000/service-registry-img:latest
 
 
 ***************************************************************************************************
+kubectl version --client --output=yaml  ===> to check the verion of kubectl
  kubectl apply -f filename    ===>       To create a deployment/service/configmap based on a given YAML file
  kubectl get all    ===>       To get all the components inside your cluster
  kubectl get pods    ===>       To get all the pods details inside your cluster

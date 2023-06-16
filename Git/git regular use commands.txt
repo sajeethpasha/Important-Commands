@@ -48,4 +48,14 @@ git push -u origin new_branch_name
 #revert  changes to last commit
 git checkout -- specififile.txt
 
+#git branch -v
+cmd:git branch -v
+resp:
+  a      09663ad [ahead 1] A5 commit check
+  b      4381305 [ahead 6, behind 5] B2 commit
+  c      4381305 B2 commit
+  d      4381305 B2 commit
+* e      4381305 B2 commit
+  master 5bc7251 Merge pull request #1 from sajeethpasha/a
+
 

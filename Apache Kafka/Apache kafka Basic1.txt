@@ -1,0 +1,108 @@
+zooleeper-server-starth.sh
+kafka-server-start.sh
+kafka-topics.sh
+kafka-console-producer.sh
+kafka-console-consumer.sh
+
+-----------------------
+#zookeeper and kafa starting
+zookeeper-server-start.sh kafka/config/zookeeper.properties
+kafka-server-start.sh kafka/config/server.properties
+
+#Create kafka topics
+kafka-topic.sh 
+--create                     
+--zookeeper localhost:2181 
+--replication-factor 1
+--partitions 1
+--topic example1 
+
+#To list the kafka topics
+kafka-topics.sh 
+--list
+--zookeeper localhost:2181
+
+
+#kafka producer
+kafka-console-producer.sh 
+--broker-list localhost:9002
+--topic example1
+
+#kafka consumer
+kafka-console-consumer.sh
+--boostrap-server localhost:90092
+--topic example1
+--form-beginning
+
+=====================================multi broker setup =====================================
+-------------for multi broker in cd kafka/config -------------
+cp server.properties server1.properties  
+cp server.properties server2.properties
+
+------------server 1 configs----------------
+broker.id=1
+listeners=PLAINTEXT://:9093
+log.dirs=/tmp/kafka-logs1
+
+
+------------server 2 configs----------------
+broker.id=2
+listeners=PLAINTEXT://:909
+log.dirs=/tmp/kafka-logs2
+
+--------To start two servers -----------------
+kafka-server-start.sh kafka/config/server1.properties
+kafka-server-start.sh kafka/config/server2.properties
+
+
+
+kafka-topics.sh 
+--create 
+-- topic example2
+--zookeeper localhost:2181
+--partitions 3
+--replication-factor 2
+
+#To check which broker is listenig on current created topic
+kafka-topics.sh
+--describe
+--zookeeper localhost:2181
+--topic example2
+
+#Start the producer to send messages
+kafka-console-producer.sh
+--broker-list localhost:9093,localhost:9094,localhost:9092 
+--topic example2
+
+#Start consumer to receive messages
+kafka-console-consumer.sh
+--boostrap-server localhost:9093
+--topic example2
+--from-beginning
+
+
+
+===============Basic Topic operations ==============
+kafka-topics.sh 
+--zookeeper localhost:2181 
+--alter
+--topic example1
+--partitions 2
+
+kafka-topics.sh
+--zookeeper localhost:2182 
+--delete
+--topic Flume_topics
+ 
+
+
+
+
+
+
+
+
+
+
+
+

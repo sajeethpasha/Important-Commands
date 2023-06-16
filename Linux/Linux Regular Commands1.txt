@@ -1,0 +1,10 @@
+---------------ll-------------
+total 102648
+drwxrwxr-x 3 sajeeth sajeeth      4096 Dec 23 21:26 ./
+drwxrwxr-x 3 sajeeth sajeeth      4096 Dec 23 21:23 ../
+drwxr-xr-x 7 sajeeth sajeeth      4096 Sep 29 12:05 kafka/
+-rw-rw-r-- 1 sajeeth sajeeth 105092106 Dec 23 21:22 kafka_2.12-3.3.1.tgz
+------------------------------------------
+
+#To get include the hiden file also.
+ls -la ~/ | more

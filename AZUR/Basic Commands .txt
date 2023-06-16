@@ -1,0 +1,8 @@
+#Check azure version
+az --version 
+
+#login into azur
+az login
+
+#show account
+az account show
